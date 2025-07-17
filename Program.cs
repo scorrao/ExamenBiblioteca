@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-Biblioteca biblioteca = new Biblioteca();
+﻿Biblioteca biblioteca = new Biblioteca();
 void MostrarMenu()
 {
     Console.Clear();
@@ -50,6 +48,7 @@ void RegistrarEjemplar()
         default:
             return;
     }
+    e.Codigo = codigo;
     Console.WriteLine("Ingrese el Titulo");
     e.Titulo = Console.ReadLine();
     Console.WriteLine("Ingrese el Genero");
