@@ -143,21 +143,21 @@ void RegistrarDevolucion()
     * Verficar que está prestado
     * Registrar que volvió
     */
-
+    Console.WriteLine("Ingrese el codigo de ejemplar");
     int codigo = int.Parse(Console.ReadLine());
     if (Existe(codigo))
     {
         if (!EstaDisponible(codigo))
         {
-        //     foreach (Prestamo p in biblioteca.Prestamos)
-        //     {
-        //         if (p.CodigoEjemplar == codigo && p.Devuelto == false)
-        //         {
-        //             p.Devuelto = true;
-        //             p.FechaDevolucion = DateTime.Now;
-        //             break;
-        //         }
-        //     }
+            //     foreach (Prestamo p in biblioteca.Prestamos)
+            //     {
+            //         if (p.CodigoEjemplar == codigo && p.Devuelto == false)
+            //         {
+            //             p.Devuelto = true;
+            //             p.FechaDevolucion = DateTime.Now;
+            //             break;
+            //         }
+            //     }
             Prestamo p2 = biblioteca.Prestamos
             .First(p => p.CodigoEjemplar == codigo && !p.Devuelto);
             p2.Devuelto = true;
@@ -232,6 +232,7 @@ while (true)
             Console.WriteLine("Opcion Incorrecta");
             break;
     }
+    Console.WriteLine("Operacion correcta");
     Console.ReadKey();
     MostrarMenu();
 i = int.Parse(Console.ReadLine());
